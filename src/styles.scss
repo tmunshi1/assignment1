@@ -1,0 +1,135 @@
+:root {
+    --green: #69F0AE;
+    --green-light: #B9F6CA;
+    --gray-light: #03a061;
+    --dark-gray: #1d81b4;
+    --black: #050404;
+}
+
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1500px;
+    outline: 0px solid rgb(255, 255, 255);
+}
+
+h1 {
+    padding: 1rem 0;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--brown);
+    outline: 1px solid white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+:host {
+    display: block;
+    padding: 4rem 2rem 6rem;
+    background-color: var(--dark-gray);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0% 95%);
+}
+
+.name {
+    grid-row: 2/3;
+    padding: 0 0 2rem;
+    color: rgb(6, 94, 132);
+    text-align: center;
+    font-style: italic;
+    font-size: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.name span:nth-of-type(1) span {
+    font-size: 3rem;
+    color: var(--brown);
+}
+
+.name span:nth-of-type(2) {
+    display: inline-block;
+    color: var(--brown);
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 10px 0;
+    letter-spacing: 8px;
+    text-shadow: 10px 8px 10px var(--black);
+}
+
+.profile {
+    width: 200px;
+    height: 200px;
+    grid-row: 3/4;
+    margin: 0 auto; /* Adjusted property */
+    position: relative;
+    clip-path: inset(0 round 0 0 25%);
+    display: flex; /* Added property */
+    justify-content: center; /* Added property */
+    align-items: center; /* Added property */
+  }
+  
+  .profile .profile-bg {
+    height: 95%;
+    width: 100%;
+    bottom: 0%;
+    position: absolute;
+    background-color: #088196;
+    clip-path: inset(0 round 50% 0 0);
+  }
+  
+  .profile img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: contain; /* Added property */
+  }
+  footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+ }
+  
+:host.pc {
+    padding: 4rem 2rem 10rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
+}
+
+:host.pc .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+:host.pc .title {
+    grid-column: 1/2;
+    padding: 0%;
+    margin: auto;
+    font-size: 5rem;
+    font-style: normal;
+    text-decoration: none;
+}
+
+:host.pc .profile {
+    grid-row: 1/3;
+    grid-column: 2/3;
+    width: 600px;
+    height: 600px;
+}
+
+:host.pc .name {
+    grid-row: 2/3;
+    width: 600px;
+    margin: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+    height: max-content;
+}

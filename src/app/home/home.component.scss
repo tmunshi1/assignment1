@@ -1,0 +1,57 @@
+:host {
+    display: block;
+    color: rgb(84, 95, 210);
+    padding: 3rem 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    gap: 2rem;
+    display: grid;
+}
+
+table {
+    font-size: 1.3rem;
+    outline: 1px solid rgb(3, 146, 134);
+}
+
+table tr {
+    height: 40px;
+}
+
+table tr td {
+    padding-left: 0.5rem;
+}
+
+table tr td:nth-child(even) {
+    color: var(--dark-gray);
+}
+
+section p {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+section p:not(:first-child) {
+    margin-top: 1rem;
+}
+
+/* PC */
+
+:host.pc {
+    margin-top: 3rem;
+}
+
+:host.pc .container {
+    grid-template-columns: 1fr 1fr;
+}
+
+:host.pc h1 {
+    grid-column: 1/3;
+}
+
+:host.pc section,
+:host.pc table {
+    width: 80%;
+    margin: auto;
+}
